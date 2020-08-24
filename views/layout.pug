@@ -1,0 +1,15 @@
+doctype html
+html
+head
+  title= title
+  link(rel="stylesheet" type="text/css" href="/stylesheets/bulma.css")
+  link(rel='stylesheet' type="text/css" href='/stylesheets/style.css')
+  link(rel='shortcut icon', href='/images/favicon.ico')
+  script(src="javascripts/jquery.js")
+  script(src="javascripts/global.js")
+header
+  include includes/head.pug
+body.container
+    block content
+footer
+  include includes/footer.pug

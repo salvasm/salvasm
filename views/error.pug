@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  .container.has-text-centered.py-5
+    h1.title= message
+    h2.subtitle= error.status
+  .container.py-5
+    pre #{error.stack}
