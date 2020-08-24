@@ -1,0 +1,20 @@
+a.is-hidden-desktop(href='/')
+    img.image.container(src='/images/s_head_black.png' alt=title, style='height: 50px;')
+
+a.navbar-burger(role='button', aria-label='menu', aria-expanded='false')
+  span(aria-hidden='true')
+  span(aria-hidden='true')
+  span(aria-hidden='true')
+
+nav.level.navbar-menu.mb-5
+    .level-item.has-text-centered.is-medium.is-fullwidth
+        a.navbar-item.is-fullwidth(href='/cv') CV
+    .level-item.has-text-centered
+        a.navbar-item(href='/photo') Photography
+    .level-item.has-text-centered.is-hidden-touch
+        a.is-info.has-text-centered(href='/')
+            img.image(src='/images/s_head_black.png' alt=title, style='height: 50px;')
+    .level-item.has-text-centered
+        a.navbar-item.disabled(href='/blog') Blog
+    .level-item.has-text-centered
+        a.navbar-item(href='/contact') Contact
