@@ -5,11 +5,11 @@ var router = express.Router();
 /* GET */
 router.get('/', function (req, res, next) {
   var variables = {
-    "id" : process.env.INSTAGRAM_ID,
-    "first": process.env.INSTAGRAM_SHOW_QTY,
-    "after": process.env.INSTAGRAM_AFTER
+    "id" : process.env.IG_ID,
+    "first": process.env.IG_SHOW_QTY,
+    "after": process.env.IG_AFTER
   }
-  const instagramUrlJson = 'https://www.instagram.com/graphql/query/?query_hash=' + process.env.INSTAGRAM_QUERY_HASH + '&variables=' + JSON.stringify(variables);
+  const instagramUrlJson = 'https://www.instagram.com/graphql/query/?query_hash=' + process.env.IG_QUERY_HASH + '&variables=' + JSON.stringify(variables);
 
   https.get(instagramUrlJson, (response) => {
     let data = '';
