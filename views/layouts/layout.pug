@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    include ../includes/head.pug
+  header
+      include ../includes/header-menu.pug
+  body.d-flex.flex-column.sticky-footer-wrapper
+    .flex-fill
+      .jumbotron.jumbotron-fluid
+        .container.text-center
+          h1.display-4 #{section_title}
+      .container
+        block content
+  footer.p-5
+    include ../includes/footer.pug

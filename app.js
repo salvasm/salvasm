@@ -1,13 +1,22 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+
+// load and check enviroment
+const dotenv = require('dotenv').config();
+
+if (dotenv.error) {
+  throw dotenv.error
+} else {
+  console.log(dotenv.parsed)
+}
 
 var indexRouter = require('./routes/index');
 var cvRouter = require('./routes/cv');
 var photoRouter = require('./routes/photo');
-var blogRouter = require('./routes/blog');
+var eastereggRouter = require('./routes/easteregg');
 var contactRouter = require('./routes/contact');
 
 var app = express();
@@ -22,14 +31,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// bulma dependencies CSS and jQuery
-app.use('/stylesheets', express.static(__dirname + '/node_modules/bulma/css/'));
+// bootstrap JS dependencies and jQuery
 app.use('/javascripts', express.static(__dirname + '/node_modules/jquery/dist/'));
+app.use('/javascripts', express.static(__dirname + '/node_modules/bootstrap/dist/js/'));
 
 app.use('/', indexRouter);
 app.use('/cv', cvRouter);
 app.use('/photo', photoRouter);
-app.use('/blog', blogRouter);
+app.use('/easteregg', eastereggRouter);
 app.use('/contact', contactRouter);
 
 // catch 404 and forward to error handler

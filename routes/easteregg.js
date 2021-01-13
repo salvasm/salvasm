@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET */
 router.get('/', function (req, res, next) {
-  res.render('contact', {
-    section_title: 'Contacto'
+  res.render('easteregg', {
+    section_title: 'easteregg'
   });
 });
 

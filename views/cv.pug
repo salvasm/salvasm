@@ -1,5 +1,88 @@
-extends layout
+extends layouts/layout
 
 block content
-  h1.title Curriculum Vitae
-  h2.subtitle Under construction
+
+  h2 Experiencia
+  .row.d-none.d-xl-block
+    .col-md-12
+      .main-timeline4
+        each job in experience
+          .timeline
+            a.timeline-content(type='button' data-toggle='modal' data-target='#moreInfo', data-description=job.description, data-company=job.company, data-technologies=job.technologies)
+              span.year
+                img.card-img.d-block.mx-auto(src='images/cv/' + job.id + '.png' alt=job.company).p-3
+              .inner-content
+                h3.title #{job.position}
+                h4.subtitle #{job.company}
+                p.description
+                  .text-muted #{job.date_start} - #{job.date_end ? job.date_end : 'Actualmente'}
+
+  .row.mb-4.d-xl-none
+    each job in experience
+      .col-6
+        .card.mb-3
+          .row.no-gutters
+            .col-md-3
+              img.card-img.d-block.mx-auto(src='images/cv/' + job.id + '.png' alt=job.company).p-3
+            .col-md-9
+              .card-body
+                h5.card-title #{job.position}
+                h6.card-subtitle #{job.company}
+                p.card-text
+                  small.text-muted #{job.date_start} - #{job.date_end ? job.date_end : 'Actualmente'}
+              .text-right
+                a.pr-2.pb-1(type='button' data-toggle='modal' data-target='#moreInfo', data-description=job.description, data-company=job.company, data-technologies=job.technologies) + Info
+
+  h2 Estudios
+  .row.mb-4
+    each study in studies
+      .col-6
+        .card.mb-3
+          .row.no-gutters
+            .col-md-3
+              img.card-img.mx-auto(src='images/cv/' + study.id + '.png' alt='Universidad de Vigo').p-3
+            .col-md-9
+              .card-body
+                h5.card-title #{study.university}
+                h6.card-subtitle #{study.degree}
+                p.card-text
+                  small.text-muted  #{study.date_start} –  #{study.date_end}
+  h2 Idiomas
+  .row.mb-4
+    each language in languages
+      .col
+        .card.text-center
+          .row.no-gutters
+            .col-md-3
+              img.card-img.mx-auto.w-50(src='images/cv/' +language.id+'.svg').p-1.mt-4
+            .col-md-8
+              .card-body #{language.name}
+                p.card-text
+                  small.text-muted  #{language.level}
+
+  .row.mb-5
+    .col
+      h2 Certificados
+      ul.list-group
+        each certification in certifications
+          li.list-group-item #{certification}
+    .col
+      h2 Cursos
+      ul.list-group
+        each course in courses
+          li.list-group-item #{course}
+
+  // Modal
+  #moreInfo.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h5.modal-title 
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          | ...
+        .modal-technologies
+          p.px-2
+        .modal-footer
+          button.btn.btn-secondary(type='button' data-dismiss='modal') Cerrar
