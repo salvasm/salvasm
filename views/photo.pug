@@ -1,5 +1,25 @@
-extends layout
+extends layouts/layout
 
 block content
-  h1.title Photography
-  h2.subtitle Under construction
+  .row
+    each edge in data.edges
+      .col-4.mb-3
+        a.img-container(type='button' data-toggle='modal' data-target='#displayPhoto', data-url=edge.node.display_url, data-shortcode=edge.node.shortcode)
+          img.img-thumbnail(src=edge.node.thumbnail_src)
+          .middle
+            .zoom
+              i.fa.fa-search.fa-2x
+
+  .row
+    .col-4.mx-auto.text-center
+      a.btn.btn-secondary(href='https://www.instagram.com/' + process.env.INSTAGRAM) Ver las #{data.count - 12} fotos restastes en instagram
+   
+  // Modal display_url
+  #displayPhoto.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-body
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') ×
+          .instagram-link
+          .img

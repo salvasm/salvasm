@@ -1,0 +1,6 @@
+$fonts-path: '../../fonts/';
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts-path+'/Montserrat-Regular.ttf') format('truetype');
+}

@@ -1,5 +1,39 @@
-extends layout
+extends layouts/layout
 
 block content
-  h1.title Contact
-  h2.subtitle Under construction
+  .contact-page
+    .row.justify-content-md-center.text-center
+      .col-12
+        p.pb-4 Puedes enviarme un correo electrónico:
+      .col
+        a(href='mailto:' + process.env.EMAIL).btn.btn-link-big
+          i.fa.fa-envelope.fa-5x
+          br
+          |
+          small Email
+      .col-12
+        p.p-5 O contactarme a través de mis redes:
+      .col.mb-5
+        a(href='https://www.linkedin.com/in/' + process.env.LINKEDIN).btn.btn-link
+          i.fa.fa-linkedin.fa-3x
+          br
+          |
+          small LinkedIn
+      .col
+        a(href='https://www.instagram.com/' + process.env.INSTAGRAM).btn.btn-link
+          i.fa.fa-instagram.fa-3x
+          br
+          |
+          small Instagram
+      .col
+        a(href='https://twitter.com/' + process.env.TWITTER).btn.btn-link
+          i.fa.fa-twitter.fa-3x
+          br
+          |
+          small Twitter
+      .col
+        a(href='skype:' + process.env.SKYPE + '?chat').btn.btn-link
+          i.fa.fa-skype.fa-3x
+          br
+          |
+          small Skype
