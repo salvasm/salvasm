@@ -4,14 +4,12 @@ var router = express.Router();
 
 /* GET */
 router.get('/', function (req, res, next) {
-  // "https://www.instagram.com/graphql/query/?query_hash=472f257a40c653c64c666ce877d59d2b&variables={"id":"31930756","first":12,"after":""}"
-  // https://www.instagram.com/salva_sm/?__a=1
-  const instagramUrlJson = 'https://www.instagram.com/graphql/query/?query_hash=472f257a40c653c64c666ce877d59d2b&variables={"id":"31930756","first":12,"after":"QVFBVl9fOU9EckJJLXcwZmM1eDQ5UXVSWGJjSFFVbi0zNTFaWmUybV9hWnAyeEV6bTl0c0lZelJkMFVVTGRUTG45Nk9SVEhPaXhuWHpFOXdNSUxfTXdmYg=="}';
   var variables = {
-    "id" : "31930756",
-    "first": "12",
-    "after": ""
+    "id" : process.env.INSTAGRAM_ID,
+    "first": process.env.INSTAGRAM_SHOW_QTY,
+    "after": process.env.INSTAGRAM_AFTER
   }
+  const instagramUrlJson = 'https://www.instagram.com/graphql/query/?query_hash=' + process.env.INSTAGRAM_QUERY_HASH + '&variables=' + JSON.stringify(variables);
 
   https.get(instagramUrlJson, (response) => {
     let data = '';
