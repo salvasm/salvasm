@@ -2,3 +2,5 @@
 node_modules
 salvasm.code-workspace
 .vscode
+# Local Netlify folder
+.netlify
