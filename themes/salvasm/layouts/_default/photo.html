@@ -1,21 +1,18 @@
 {{ define "main" }}
 <div class="container">
-  {{ $ins := getJSON "https://www.instagram.com/salva_sm/?__a=1" }}
   <div class="row">
-    {{ range $edges := $ins.graphql.user.edge_owner_to_timeline_media.edges }}
-    {{ range $index, $image := $edges.node.thumbnail_resources }}
-    {{ $src := $image.src }} {{ if eq $index 4 }}
-    <div class="col-4">
-      <a href="{{ $src }}" target="_blank">
-        {{ $thumb := resources.Get "images/thumbnail.png" }}
-        <img
-          src="{{ $thumb.RelPermalink }}"
-          alt=""
-          class="img-thumbnail mb-4"
-        />
-      </a>
+    {{ $counter := 0 }}
+    {{ $images := resources.Match "images/photo/*" }}
+    {{ range $images }}
+      <div class="col-4">
+        <img src="{{ .RelPermalink }}" class="img-thumbnail mb-4"/>
+      </div>
+    {{ end }}
     </div>
-    {{ end }} {{ end }} {{ end }}
+    <div class="row justify-content-center mb-5">
+      <a href="https://www.instagram.com/salva_sm/" target="_blank" type="button" class="btn btn-secondary btn-lg w-25 m-3">+ Instagram</a>
+      <a href="https://500px.com/p/salva_sm" target="_blank" type="button" class="btn btn-secondary btn-lg w-25 m-3">+ 500px</a>
+    </div>
   </div>
 </div>
 {{ end }}
