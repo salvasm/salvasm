@@ -3,8 +3,8 @@
   {{ $ins := getJSON "https://www.instagram.com/salva_sm/?__a=1" }}
   <div class="row">
     {{ range $edges := $ins.graphql.user.edge_owner_to_timeline_media.edges }}
-    {{ range $index, $image := $edges.node.thumbnail_resources }} {{ $src :=
-    $image.src }} {{ if eq $index 4 }}
+    {{ range $index, $image := $edges.node.thumbnail_resources }}
+    {{ $src := $image.src }} {{ if eq $index 4 }}
     <div class="col-4">
       <a href="{{ $src }}" target="_blank">
         {{ $thumb := resources.Get "images/thumbnail.png" }}
