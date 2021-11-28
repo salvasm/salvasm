@@ -1,0 +1,33 @@
+baseURL = '/'
+languageCode = 'es'
+title = 'Salva SM'
+theme = 'salvasm'
+
+[menu]
+[[menu.main]]
+  identifier = 'cv'
+  name = 'CV'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/cv/'
+  weight = 1
+[[menu.main]]
+  identifier = 'projects'
+  name = 'Projects'
+  post = "<span class='alert'>New!</span>"
+  pre = "<i class='fa fa-road'></i>"
+  url = '/projects/'
+  weight = 2
+ [[menu.main]]
+  identifier = 'photo'
+  name = 'Photo'
+  post = "<span class='alert'>New!</span>"
+  pre = "<i class='fa fa-road'></i>"
+  url = '/photo/'
+  weight = 3
+[[menu.main]]
+  identifier = 'contact'
+  name = 'Contact'
+  post = "<span class='alert'>New!</span>"
+  pre = "<i class='fa fa-road'></i>"
+  url = '/contact/'
+  weight = 4

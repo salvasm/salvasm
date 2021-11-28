@@ -1,0 +1,21 @@
+<section id="homepage">
+    {{ block "main" . }}
+        {{ if eq .IsHome true }}
+            <div class="row">
+                <div class="col-4">
+                    {{ $avatar := resources.Get "images/me.png" }}
+                    <img src="{{ $avatar.RelPermalink }}" alt="" class="w-100">
+                </div>
+                <div class="col">
+                    {{ if .Content }}
+                        {{ .Content }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ else }}
+            {{ if .Content }}
+                {{ .Content }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</section>

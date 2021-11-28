@@ -1,0 +1,39 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+a,
+p,
+small,
+li,
+h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+/* Navitagion */
+#nav a {
+    color: black;
+}
+#nav .nav-item:hover,
+#nav .nav-item:active {
+    background: #ccc !important;
+}
+
+#nav .nav-item:not(:last-child) {
+    margin-right: 5%;
+}

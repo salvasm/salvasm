@@ -1,0 +1,27 @@
+<ul class="nav nav-pills nav-justified mt-5 mb-2">
+{{ $currentPage := .  }}
+{{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+        <li class="nav-item bg-light{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+            <a href="#" class="nav-link">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+        <ul class="sub-menu">
+            {{ range .Children }}
+                <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                    <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    {{ else }}
+        <li class="nav-item border-bottom bg-light">
+            <a href="{{ .URL }}" class="nav-link">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+    {{ end }}
+{{ end }}
+</ul>

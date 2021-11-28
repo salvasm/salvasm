@@ -1,0 +1,119 @@
+{
+  "experience": {
+    "0": {
+      "id": "landin",
+      "company": "Landín Informática",
+      "date_start": "Marzo 2011",
+      "date_end": "Mayo 2011",
+      "position": "Técnico informático",
+      "description": "<ul><li>Soporte técnico in situ o a distancia</li><li>Reparación, montaje e instalación de equipos, servidores y TPVs</li><li>Proactivamente: realización de gestor de tickets internos para el departamento de IT.</li></ul>",
+      "technologies": ["PHP", "MySql", "HTML", "CSS", "LAMP", "Ubuntu Server"]
+    },
+    "1": {
+      "id": "ziblec",
+      "company": "Ziblec",
+      "date_start": "Febrero 2016",
+      "date_end": "Septiembre 2016",
+      "position": "Programador",
+      "description": "Implementación de funcionalidades y diseño para Joomla, Wordpress y Prestashop.",
+      "technologies": ["PHP", "CSS", "JS", "JQuery", "HTML", "MySQL", "Git"]
+    },
+    "2": {
+      "id": "alineasol",
+      "company": "Alineasol",
+      "date_start": "Enero 2017",
+      "date_end": "Enero 2020",
+      "position": "Programador",
+      "description": "<ul><li>Desarrollo de funcionalidades y mantenimiento para Sugar CRM</li><li>Desarrollo de proyecto selfcare multiplataforma</li></ul>",
+      "technologies": [
+        "Angular",
+        "NodeJS",
+        "PHP",
+        "CSS",
+        "JS",
+        "JQuery",
+        "HTML",
+        "MySQL",
+        "Git"
+      ]
+    },
+    "3": {
+      "id": "3mt",
+      "company": "3MT Global Services S.L.",
+      "date_start": "Enero 2020",
+      "date_end": "",
+      "position": "Analista programador",
+      "description": "FullStack SalesForce developer",
+      "technologies": ["SalesForce", "JS", "ISML", "SCSS", "CSS"]
+    }
+  },
+  "studies": {
+    "0": {
+      "id": "chandomonte",
+      "university": "IES Chan do Monte",
+      "degree": "Técnico Superior en Administración de Sistemas Informáticos",
+      "date_start": "2009",
+      "date_end": "2011"
+    },
+    "1": {
+      "id": "xamk",
+      "university": "Xamk - South-Eastern Finland University of Applied Sciences",
+      "degree": "Information Technology Degree",
+      "date_start": "2013",
+      "date_end": "2014"
+    },
+    "2": {
+      "id": "catania",
+      "university": "Unversità di Catania",
+      "degree": "Laurea in Ingegneria Informatica",
+      "date_start": "2014",
+      "date_end": "2015"
+    },
+    "3": {
+      "id": "uvigo",
+      "university": "Universidad de Vigo",
+      "degree": "Grado en Ingeniería Informática",
+      "date_start": "2011",
+      "date_end": "2017"
+    }
+  },
+  "certifications": {
+    "0": "M220JS: MongoDB for JavaScript Developers",
+    "1": "M001: MongoDB Basics",
+    "2": "MTA: Networking Fundamentals",
+    "3": "Duolingo en inglés: Avanzado",
+    "4": "English - Intermediate Certificate",
+    "5": "Microsoft Certified Professional",
+    "6": "Content Management CeMIT"
+  },
+  "courses": {
+    "0": "Android: App programming",
+    "1": "Human rights, society and technology information",
+    "2": "Digital Photography",
+    "3": "Free Software and Open Knowledge",
+    "4": "Survival, climbing and abseiling",
+    "5": "e-Adventure"
+  },
+  "languages": {
+    "0": {
+      "id": "es",
+      "name": "Español",
+      "level": "Nativo"
+    },
+    "1": {
+      "id": "es-ga",
+      "name": "Gallego",
+      "level": "Nativo"
+    },
+    "2": {
+      "id": "gb",
+      "name": "Inglés",
+      "level": "Avanzando"
+    },
+    "3": {
+      "id": "it",
+      "name": "Italiano",
+      "level": "Avanzado"
+    }
+  }
+}

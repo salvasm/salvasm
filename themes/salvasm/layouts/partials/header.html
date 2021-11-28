@@ -1,0 +1,12 @@
+<section id="nav" class="container mt-4">
+  <a href="{{ .Site.BaseURL }}" class="">
+    {{ $logo := resources.Get "/images/s_head_black.png" }}
+    <img
+      alt="{{ .Site.Title }}"
+      src="{{ $logo.RelPermalink }}"
+      class="img-fluid w-25 mx-auto d-block"
+    />
+  </a>
+</section>
+
+<nav id="nav" class="container">{{ partial "nav.html" . }}</nav>

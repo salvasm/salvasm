@@ -1,0 +1,73 @@
+{{ define "main" }}
+<div class="container">
+  <!-- Categories -->
+  <h3 class="text-secondary p-3 border-bottom bg-light">Experiencia</h3>
+  <div class="row pb-5">
+    {{ range $category := sort $.Site.Data.cv.experience "" "desc" }}
+    <div class="col">
+      {{ $logo := resources.Get (printf "images/cv/%s.png" .id) }}
+      <div class="card-body mt-1 text-center">
+        <img
+          class="w-50 mx-auto d-block mb-3"
+          src="{{ $logo.RelPermalink }}"
+          alt="{{ .company }}"
+        />
+        <h6>{{ .position }}</h6>
+        <p>{{ .company }}</p>
+        <small>{{ .date_start }} - {{ .date_end }}</small>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- Studies -->
+  <h3 class="text-secondary p-3 border-bottom bg-light">Estudios</h3>
+  <div class="row pb-5">
+    {{ range $category := sort $.Site.Data.cv.studies "" "desc" }}
+    <div class="col">
+      {{ $logo := resources.Get (printf "images/cv/%s.png" .id) }}
+      <img
+        class="w-50 mx-auto d-block mb-3"
+        src="{{ $logo.RelPermalink }}"
+        alt="{{ .university }}"
+      />
+      <div class="card-body mt-1 text-center">
+        <h6>{{ .degree }}</h6>
+        <p>{{ .university }}</p>
+        <small>{{ .date_start }} - {{ .date_end }}</small>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- Languages -->
+  <h3 class="text-secondary p-3 border-bottom bg-light">Idiomas</h3>
+  <div class="row pb-5">
+    {{ range $category := $.Site.Data.cv.languages }}
+    <div class="col m-4 text-center">
+      <h3>{{ .name }}</h3>
+      <small>{{ .level }}</small>
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="row pb-5">
+    <div class="col">
+      <h3 class="text-secondary p-3 border-bottom bg-light">Certificados</h3>
+      <ul class="m-2">
+        {{ range $category := $.Site.Data.cv.certifications }}
+        <li class="m-1">{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="col">
+      <h3 class="text-secondary p-3 border-bottom bg-light">Cursos</h3>
+      <ul class="m-2">
+        {{ range $category := $.Site.Data.cv.courses }}
+        <li class="m-1">{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>
+{{ end }}

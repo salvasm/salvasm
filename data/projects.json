@@ -1,0 +1,29 @@
+{
+    "0": {
+        "title": "Football Club Manager",
+        "description": "Gestor de socios y staff de un club desarrollado con Laravel",
+        "image": "fcm_s.png",
+        "repository": "",
+        "demo": "",
+        "tools": ["laravel"],
+        "progress": "25"
+    },
+    "1": {
+        "title": "Node API Rest",
+        "description": "API Rest con integración de CRUD para usar como base genérica de proyectos",
+        "image": "node_api_s.png",
+        "repository": "https://github.com/salvasm/node-api-rest",
+        "demo": "",
+        "tools": ["Node.js"],
+        "progress": "75"
+    },
+    "2": {
+        "title": "Booksea",
+        "description": "Sistema de gestión de coleccion de libros desarrollado para la UVigo como TFG",
+        "image": "booksea_s.png",
+        "repository": "https://github.com/salvasm/booksea",
+        "demo": "booksea_demo.png",
+        "tools": ["SlimPHP", "Angular", "Bootstrap"],
+        "progress": "50"
+    }
+}

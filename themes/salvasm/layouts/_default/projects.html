@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row mb-5">
+    {{ range $projects := $.Site.Data.projects }}
+    <div class="col">
+      <div class="card shadow-sm mb-4">
+        {{ $smallImage := resources.Get (printf "images/projects/%s" .image) }}
+        <img src="{{ $smallImage.RelPermalink }}" class="img-fluid">
+            <div class="card-body">
+                <h5>{{ .title }}</h5>
+                <p class="card-text mb-5">{{ .description }}</p>
+                <span class="text-bold mb-5">Progreso:</span>
+                <div class="progress mb-4">
+                    <div class="progress-bar w-{{ .progress }} bg-success" role="progressbar"></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                {{ range .tools }}
+                    <small class="text-muted">
+                        {{ . }}
+                    </small>
+                {{ end }}
+                <div class="btn-group">
+                    <!-- Github link -->
+                    {{ if .repository }}
+                        <a href="{{ .repository }}" target="_blank" type="button" class="btn btn-sm btn-outline-secondary ">Código</a>
+                    {{ else }}
+                        <a href="" type="button" class="btn btn-sm btn-outline-secondary disabled">Código</a>
+                    {{end}}
+                    {{ if .demo }}
+                        {{ $demoImage := resources.Get (printf "images/projects/%s" .demo) }}
+                        <a href="{{ $demoImage.RelPermalink }}" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">Demo</a>
+                    {{ else }}
+                        <a href="" type="button" class="btn btn-sm btn-outline-secondary disabled">Demo</a>
+                    {{ end }}
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+  </div>
+{{ end }}
