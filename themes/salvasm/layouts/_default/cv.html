@@ -4,7 +4,7 @@
   <h3 class="text-secondary p-3 border-bottom bg-light">Experiencia</h3>
   <div class="row pb-5">
     {{ range $category := sort $.Site.Data.cv.experience "" "desc" }}
-    <div class="col">
+    <div class="col-md">
       {{ $logo := resources.Get (printf "images/cv/%s.png" .id) }}
       <div class="card-body mt-1 text-center">
         <img
@@ -24,7 +24,7 @@
   <h3 class="text-secondary p-3 border-bottom bg-light">Estudios</h3>
   <div class="row pb-5">
     {{ range $category := sort $.Site.Data.cv.studies "" "desc" }}
-    <div class="col">
+    <div class="col-md">
       {{ $logo := resources.Get (printf "images/cv/%s.png" .id) }}
       <img
         class="w-50 mx-auto d-block mb-3"
@@ -44,7 +44,7 @@
   <h3 class="text-secondary p-3 border-bottom bg-light">Idiomas</h3>
   <div class="row pb-5">
     {{ range $category := $.Site.Data.cv.languages }}
-    <div class="col m-4 text-center">
+    <div class="col-md m-4 text-center">
       <h3>{{ .name }}</h3>
       <small>{{ .level }}</small>
     </div>
@@ -52,7 +52,7 @@
   </div>
 
   <div class="row pb-5">
-    <div class="col">
+    <div class="col-md">
       <h3 class="text-secondary p-3 border-bottom bg-light">Certificados</h3>
       <ul class="m-2">
         {{ range $category := $.Site.Data.cv.certifications }}
@@ -60,7 +60,7 @@
         {{ end }}
       </ul>
     </div>
-    <div class="col">
+    <div class="col-md">
       <h3 class="text-secondary p-3 border-bottom bg-light">Cursos</h3>
       <ul class="m-2">
         {{ range $category := $.Site.Data.cv.courses }}
