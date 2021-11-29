@@ -7,27 +7,46 @@ theme = 'salvasm'
 [[menu.main]]
   identifier = 'cv'
   name = 'CV'
-  pre = "<i class='fa fa-heart'></i>"
   url = '/cv/'
   weight = 1
 [[menu.main]]
   identifier = 'projects'
-  name = 'Projects'
-  post = "<span class='alert'>New!</span>"
-  pre = "<i class='fa fa-road'></i>"
+  name = 'Proyectos'
   url = '/projects/'
   weight = 2
  [[menu.main]]
   identifier = 'photo'
-  name = 'Photo'
-  post = "<span class='alert'>New!</span>"
-  pre = "<i class='fa fa-road'></i>"
+  name = 'Fotografía'
   url = '/photo/'
   weight = 3
 [[menu.main]]
   identifier = 'contact'
-  name = 'Contact'
-  post = "<span class='alert'>New!</span>"
-  pre = "<i class='fa fa-road'></i>"
+  name = 'Contacto'
   url = '/contact/'
   weight = 4
+
+[[menu.social]]
+  identifier = 'gmail'
+  name = 'Gmail'
+  url = 'mailto:salvador.sanchez.mendez@gmail.com'
+  weight = 1
+[[menu.social]]
+  identifier = 'linkedin'
+  name = 'LinkedIn'
+  url = 'https://www.linkedin.com/in/salvasm'
+  weight = 2
+[[menu.social]]
+  identifier = 'instagram'
+  name = 'Instagram'
+  url = 'https://www.instagram.com/salva_sm'
+  weight = 3
+[[menu.social]]
+  identifier = 'twitter'
+  name = 'Twitter'
+  url = 'https://www.twitter.com/_salvasm'
+  weight = 4
+[[menu.social]]
+  identifier = '500px'
+  name = '500px'
+  url = 'https://500px.com/p/salva_sm'
+  weight = 5

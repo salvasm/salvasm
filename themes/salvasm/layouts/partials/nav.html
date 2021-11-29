@@ -4,7 +4,6 @@
     {{ if .HasChildren }}
         <li class="nav-item bg-light{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
             <a href="#" class="nav-link">
-                {{ .Pre }}
                 <span>{{ .Name }}</span>
             </a>
         </li>
@@ -16,9 +15,8 @@
             {{ end }}
         </ul>
     {{ else }}
-        <li class="nav-item border-bottom bg-light">
+        <li class="nav-item border-bottom bg-light btn-one">
             <a href="{{ .URL }}" class="nav-link">
-                {{ .Pre }}
                 <span>{{ .Name }}</span>
             </a>
         </li>

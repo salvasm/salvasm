@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="container" id="contact">
+  <div class="row mb-5">
+    {{ if .Content }}
+    <div class="py-4 text-center">{{ .Content }}</div>
+    {{ end }} {{ range .Site.Menus.social }} {{ $socialImg := resources.Get
+    (printf "/images/social/%s.png" .Identifier) }}
+    <div class="col-sm text-center">
+      <a href="{{ .URL }}" target="_blank">
+        <img
+          src="{{ $socialImg.RelPermalink }}"
+          alt="{{ .Name }}"
+          title="{{ .Name }}"
+          class="ssm-social-button m-4"
+        />
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
