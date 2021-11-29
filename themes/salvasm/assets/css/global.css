@@ -30,10 +30,6 @@ ul {
     color: black;
 }
 
-#nav .nav-item {
-    transition: all 0.5s;
-}
-
 #nav .nav-item:hover,
 #nav .nav-item:active {
     background: #ccc !important;
