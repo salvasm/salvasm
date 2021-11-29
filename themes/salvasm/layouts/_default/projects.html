@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row mb-5">
     {{ range $projects := $.Site.Data.projects }}
-    <div class="col">
+    <div class="col-lg">
       <div class="card shadow-sm mb-4">
         {{ $smallImage := resources.Get (printf "images/projects/%s" .image) }}
         <img src="{{ $smallImage.RelPermalink }}" class="img-fluid">
