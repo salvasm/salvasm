@@ -1,25 +1,16 @@
-<ul class="nav nav-pills nav-justified mt-5 mb-2">
-{{ $currentPage := .  }}
-{{ range .Site.Menus.main }}
-    {{ if .HasChildren }}
-        <li class="nav-item bg-light{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-            <a href="#" class="nav-link">
-                <span>{{ .Name }}</span>
-            </a>
-        </li>
-        <ul class="sub-menu">
-            {{ range .Children }}
-                <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                    <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
-                </li>
-            {{ end }}
-        </ul>
-    {{ else }}
-        <li class="nav-item border-bottom bg-light btn-one">
-            <a href="{{ .URL }}" class="nav-link">
-                <span>{{ .Name }}</span>
-            </a>
-        </li>
-    {{ end }}
-{{ end }}
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light nav-justified mt-4">
+        <!-- <a href="#" class="navbar-brand">Brand</a> -->
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+            <div class="navbar-nav">
+                {{ $currentPage := .  }}
+                {{ range .Site.Menus.main }}
+                    <a href="{{ .URL }}" class="nav-item bg-light mx-2 border-bottom">
+                        <span>{{ .Name }}</span>
+                    </a>
+                {{ end }}
+            </div>
+        </div>
+</nav>

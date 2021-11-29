@@ -26,16 +26,20 @@ ul {
 }
 
 /* Navitagion */
-#nav a {
+.navbar a {
     color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    min-width: 150px;
+    text-align: center;
 }
 
-#nav .nav-item:hover,
-#nav .nav-item:active {
+.navbar .nav-item:hover,
+.navbar .nav-item:active {
     background: #ccc !important;
 }
 
-#nav .nav-item:not(:last-child) {
+.navbar .nav-item:not(:last-child) {
     margin-right: 5%;
 }
 
