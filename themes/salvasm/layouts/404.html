@@ -1,0 +1,7 @@
+{{ define "main"}}
+    <div class="container text-center">
+        {{ $imgErr := resources.Get "images/404.png" }}
+        <img src="{{ $imgErr.RelPermalink }}" alt="404-error" title="404-error" class="m-5 w-25">
+        <p>Lamentablemente esta página no existe. Comprueba que la URL es correcta o prueba navegando por el menú.</p>
+    </div>
+{{ end }}
