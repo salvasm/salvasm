@@ -48,3 +48,25 @@ ul {
     cursor: pointer;
     margin: 0 auto;
 }
+
+/* Photo */
+
+.ssm-photo-container {
+    position:relative;
+    margin: 5px;
+}
+
+.ssm-photo-container:hover .ssm-photo-info {
+    display:block;
+}
+
+.ssm-photo-info {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    display:none;
+    background: #CCCB;
+    width: 100%;
+    height: 100%;
+}
