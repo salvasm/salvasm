@@ -2,9 +2,9 @@
     {{ block "main" . }}
         {{ if eq .IsHome true }}
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4">
                     {{ $avatar := resources.Get "images/me.png" }}
-                    <img src="{{ $avatar.RelPermalink }}" alt="" class="w-100">
+                    <img src="{{ $avatar.RelPermalink }}"  alt="It's me!" title="It's me!" class="img-fluid rounded pb-4">
                 </div>
                 <div class="col">
                     {{ if .Content }}
