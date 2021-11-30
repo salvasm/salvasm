@@ -14,9 +14,9 @@
       {{ end }}
 
        {{ $thumbnailUrl := resources.Get (printf "images/photo/thumbnails/%s" $img.thumbnail) }}
-       <div class="col-md ssm-photo-container p-0">
+       <div class="col-md ssm-photo-container pb-3">
         <a href="{{ $imgLink }}" target="_blank">
-          <img src="{{ $thumbnailUrl.RelPermalink }}" class="ssm-photo-image img-fluid img-thumbnail" alt="{{ .title }}" title="{{ .title }}">
+          <img src="{{ $thumbnailUrl.RelPermalink }}" class="ssm-photo-image img-thumbnail" alt="{{ .title }}" title="{{ .title }}">
         </a>
        </div>
 
