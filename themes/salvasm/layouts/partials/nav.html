@@ -1,6 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light nav-justified mt-4">
-        <!-- <a href="#" class="navbar-brand">Brand</a> -->
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+<nav class="navbar navbar-expand-lg navbar-light">
+        <a href="{{ .Site.BaseURL }}" class="navbar-brand d-block d-lg-none">
+            {{ $logo := resources.Get "/images/s_head_black.png" }}
+            <img
+                alt="{{ .Site.Title }}"
+                src="{{ $logo.RelPermalink }}"
+                width="200px"
+            />
+        </a>
+
+        <button type="button" class="navbar-toggler mb-1 border-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
