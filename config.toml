@@ -3,6 +3,11 @@ languageCode = 'es'
 title = 'Salva SM'
 theme = 'salvasm'
 
+[params]
+  author = 'Salva SM'
+  description = "Información acerca de mi carrera profesinal, proyectos y fotografía"
+  keywords = "portfolio, cv, projects, photography, github, repository"
+
 [menu]
 [[menu.main]]
   identifier = 'cv'
