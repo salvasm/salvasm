@@ -15,6 +15,19 @@
         <h6>{{ .position }}</h6>
         <p>{{ .company }}</p>
         <small>{{ .date_start }} - {{ .date_end }}</small>
+
+        <div class="ssm-cv-info p-2" id="{{ .id }}">
+          <p>{{ .description | safeHTML }}</p>
+          <div class="ssm-badges">
+            {{ range .technologies }}
+              <span class="ssm-badge">
+                {{ . }}
+              </span>
+            {{ end }}
+          </div>
+        </div>
+        <button class="ssm-cv-info-btn btn btn-outline-dark btn-sm w-100 d-block mt-4" data-id="{{ .id }}">Más info</button>
+
       </div>
     </div>
     {{ end }}
