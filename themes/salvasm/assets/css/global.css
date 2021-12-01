@@ -26,6 +26,12 @@ ul {
 }
 
 /* Navitagion */
+@media (min-width: 992px) {
+    #nav {
+        top: 90px;
+    }
+}
+
 .navbar a {
     color: black;
     text-decoration: none;
