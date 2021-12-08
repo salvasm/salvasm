@@ -15,7 +15,7 @@
         "repository": "https://github.com/salvasm/node-api-rest",
         "demo": "",
         "tools": ["Node.js"],
-        "progress": "75"
+        "progress": "100"
     },
     "2": {
         "title": "Booksea",
