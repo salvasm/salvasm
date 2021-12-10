@@ -1,7 +1,7 @@
 # Hi, I'm Salva 👋
 
-I'm a fullstack developer with ~4 years of experience and tech curious since I was a child.
-My career has been centered on web technologies and applications:
+I'm a fullstack developer with more than 4 years of experience. I'm tech curious since I was a child.
+My career has been focused on web technologies and applications:
 
 - 🔭 I’m currently working on 3MT Global Services S.L. as Analyst Programmer.
 
