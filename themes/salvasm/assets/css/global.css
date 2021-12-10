@@ -25,6 +25,11 @@ ul {
     list-style-type: circle;
 }
 
+#header img {
+    max-width: 400px;
+    min-width: 350px;
+}
+
 /* Navitagion */
 @media (min-width: 992px) {
     #nav {
