@@ -9,12 +9,12 @@
         "progress": "25"
     },
     "1": {
-        "title": "Node API Rest",
+        "title": "MEN API Rest",
         "description": "API Rest con integración de CRUD para usar como base genérica de proyectos",
         "image": "node_api_s.png",
-        "repository": "https://github.com/salvasm/node-api-rest",
+        "repository": "https://github.com/salvasm/men-api-rest",
         "demo": "",
-        "tools": ["Node.js"],
+        "tools": ["MongoDB", "ExpressJS", "Node.js"],
         "progress": "100"
     },
     "2": {
